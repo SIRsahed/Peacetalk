@@ -41,16 +41,16 @@ const Home = () => {
           <div className="w-full flex justify-between">
             <div className="w-[10%] pt-8 h-screen bg-btn text-center rounded-xl">
               <img src={Profile} alt="" className="mx-auto w-18 mb-12" />
-              <div className="flex justify-center relative overflow-hidden py-3 mb-12 items-center after:absolute after:content-[''] after:w-full after:h-full after:bg-white after:z-[-1] z-[1] after:top-0 after:left-4 after:rounded-l-xl before:absolute before:content-[''] before:w-[10px] before:h-full before:bg-btn before:top-0 before:right-0 before:rounded-l-xl">
+              <div className="flex justify-center relative overflow-hidden py-3 mb-12 items-center after:absolute after:content-[''] after:w-full after:h-full after:bg-white after:z-[-1] z-[1] after:top-0 after:left-4 after:rounded-l-xl before:absolute before:content-[''] before:w-[10px] before:h-full before:bg-btn before:top-0 before:right-0 before:rounded-l-xl cursor-pointer">
                 <IoHomeOutline className="text-4xl ml-2" />
               </div>
-              <div className="flex justify-center mb-12">
+              <div className="flex justify-center mb-12 cursor-pointer">
                 <AiOutlineMessage className="text-4xl text-gray-300" />
               </div>
-              <div className="flex justify-center mb-12">
+              <div className="flex justify-center mb-12 cursor-pointer">
                 <IoMdNotificationsOutline className="text-4xl text-gray-300" />
               </div>
-              <div className="flex justify-center mb-24">
+              <div className="flex justify-center mb-24 cursor-pointer">
                 <IoSettingsOutline className="text-4xl text-gray-300" />
               </div>
               <div onClick={handleLogOut} className="flex justify-center cursor-pointer">

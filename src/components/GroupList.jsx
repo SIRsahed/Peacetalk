@@ -5,10 +5,10 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const GroupList = () => {
     return (
         <>
-            <div className="shadow-lg rounded-xl px-5 mt-3">
+            <div className="shadow-xl rounded-xl px-5 mt-3">
                 <div className="flex justify-between items-center mb-2">
                     <h3 className="text-xl font-semibold">Group List</h3>
-                    <BsThreeDotsVertical className="text-xl" />
+                    <BsThreeDotsVertical className="text-xl cursor-pointer" />
                 </div>
                 <div className="flex justify-between items-center py-4 border-b-[1px] ">
                     <div className="">
