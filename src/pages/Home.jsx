@@ -22,7 +22,7 @@ const Home = () => {
       setVerified(true)
     }
     
-  }, [])
+  }, [userData])
 
   const handleLogOut = () => {
     signOut(auth).then(() => {
