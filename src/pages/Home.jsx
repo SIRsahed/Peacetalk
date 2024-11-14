@@ -18,9 +18,10 @@ const Home = () => {
   const [verified, setVerified] = useState(false);
 
   useEffect(() => {
-    if (userData.emailVerified == true) {
+    if (userData.emailVerified === true) {
       setVerified(true)
     }
+    
   }, [])
 
   const handleLogOut = () => {
