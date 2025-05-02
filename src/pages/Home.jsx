@@ -7,6 +7,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { IoIosLogOut, IoMdNotificationsOutline } from "react-icons/io";
 import GroupList from "../components/GroupList";
 import { getAuth, signOut } from "firebase/auth";
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 
 const Home = () => {
@@ -32,15 +33,29 @@ const Home = () => {
     });
   }
 
+  let [imageUploadPopUp, setImageUploadPopUp] = useState(false);
+
+  const handleImageUpload = () => {
+    setImageUploadPopUp(true);
+  }
+
+
+  const handleSubmitImage = () => {
+    console.log("amamanamaammamamamaam");
+    
+  }
+
 
   return (
     <section>
       <div className="container mx-auto">
         {verified ?
-
           <div className="w-full flex justify-between">
-            <div className="w-[10%] pt-8 h-screen bg-btn text-center rounded-xl">
-              <img src={Profile} alt="" className="mx-auto w-18 mb-12" />
+            <div className="w-[10%] pt-8 h-screen bg-btn rounded-xl">
+              <div onClick={handleImageUpload} className="group h-16 w-16 rounded-full mx-auto mb-8 flex justify-center items-center relative after:absolute after:content-[''] after:w-full after:h-full after:bg-black after:top-0 after:left-0 after:rounded-full after:opacity-0 hover:after:opacity-55 cursor-pointer">
+                <img src={Profile} alt="" className="w-full" />
+                <FaCloudUploadAlt className="text-2xl absolute z-50 text-white opacity-0 group-hover:opacity-80" />
+              </div>
               <div className="flex justify-center relative overflow-hidden py-3 mb-12 items-center after:absolute after:content-[''] after:w-full after:h-full after:bg-white after:z-[-1] z-[1] after:top-0 after:left-4 after:rounded-l-xl before:absolute before:content-[''] before:w-[10px] before:h-full before:bg-btn before:top-0 before:right-0 before:rounded-l-xl cursor-pointer">
                 <IoHomeOutline className="text-4xl ml-2" />
               </div>
@@ -58,13 +73,13 @@ const Home = () => {
               </div>
             </div>
             <div className="w-[30%] pt-3 h-screen px-5">
-              <GroupList/>
+              <GroupList />
             </div>
             <div className="w-[30%] pt-3 h-screen px-5">
-              
+
             </div>
             <div className="w-[30%] pt-3 h-screen px-5">
-              
+
             </div>
           </div>
 
@@ -78,6 +93,20 @@ const Home = () => {
               <Link to='/login'>
                 <button className="w-[70%] text-center py-3 bg-btn rounded-lg text-white font-pops text-[14px] mb-6 uppercase tracking-wider">Go To Login</button>
               </Link>
+            </div>
+          </div>
+        }
+
+        {imageUploadPopUp &&
+          <div className="flex justify-center items-center h-[100vh] w-[35vw] mx-auto absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+            <div className="w-full bg-primary border-2 border-secondary py-14 text-center rounded-md">
+              <h2 className="text-[#FBFDF5] text-center font-pops pb-4">Peace Talk</h2>
+              <p className="text-[#FBFDF5] text-center font-pops pb-8 opacity-85">Upload Your Profile Photo</p>
+              <div className="relative w-[70%] mx-auto pb-10">
+                <input type="file" className="text-white" />
+              </div>
+              <button onClick={handleSubmitImage} className="w-[70%] text-center py-3 bg-btn rounded-lg text-white font-pops text-[14px] mb-6 uppercase tracking-wider">Upload</button>
+              <button onClick={() => setImageUploadPopUp(false)} className="w-[70%] text-center py-3 bg-btn rounded-lg text-white font-pops text-[14px] mb-6 uppercase tracking-wider">Cancel</button>
             </div>
           </div>
         }

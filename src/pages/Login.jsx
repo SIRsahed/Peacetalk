@@ -109,7 +109,6 @@ const Login = () => {
         <section>
             <div className="container mx-auto">
                 {forgottenDiv ?
-
                     <div className="flex justify-center items-center h-[100vh] w-[35vw] mx-auto">
                         <div className="w-full bg-primary border-2 border-secondary py-14 text-center rounded-md">
                             <h2 className="text-[#FBFDF5] text-center font-pops pb-4">Peace Talk</h2>

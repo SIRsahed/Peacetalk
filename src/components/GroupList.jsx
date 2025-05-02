@@ -16,7 +16,7 @@ const GroupList = () => {
                     </div>
                     <div className="">
                         <h4>User Name</h4>
-                        <p>Hey Guys, what's up!</p>
+                        <p>Hey Guys, what&apos;s up!</p>
                     </div>
                     <div className="">
                         <button className='px-5 bg-btn text-white rounded-md py-1'>Join</button>
@@ -28,7 +28,7 @@ const GroupList = () => {
                     </div>
                     <div className="">
                         <h4>User Name</h4>
-                        <p>Hey Guys, what's up!</p>
+                        <p>Hey Guys, what&apos;s up!</p>
                     </div>
                     <div className="">
                         <button className='px-5 bg-btn text-white rounded-md py-1'>Join</button>
@@ -40,7 +40,7 @@ const GroupList = () => {
                     </div>
                     <div className="">
                         <h4>User Name</h4>
-                        <p>Hey Guys, what's up!</p>
+                        <p>Hey Guys, what&apos;s up!</p>
                     </div>
                     <div className="">
                         <button className='px-5 bg-btn text-white rounded-md py-1'>Join</button>
